@@ -1,4 +1,4 @@
-// todo- hide the screen
+// todo- hide the home screen
 function hideScreen(elementId){
   const element=document.getElementById(elementId)
   element.classList.add('hidden')
@@ -10,15 +10,23 @@ function showScreen(elementId){
   element.classList.remove('hidden')
 }
 
+// todo-get random alphabet
 
-// todo-random alphabet
 function getRandomAlphabet(){
-  const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
   return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
-// todo-set the random button color
-function setRandomButtonColor(elementId){
+// todo-set the random alphabet button color
+function setRandomAlphabetButton(elementId){
   const element=document.getElementById(elementId)
   element.classList.add('bg-orange-500')
 }
+
+// todo-remove the random alphabet button color
+
+function removeRandomAlphabetButton(elementId){
+  const element=document.getElementById(elementId)
+  element.classList.remove('bg-orange-500')
+}
+
