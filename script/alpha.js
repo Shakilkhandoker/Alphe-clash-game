@@ -12,11 +12,11 @@
 //   playScreen.classList.remove('hidden');
 // })
 
-document.getElementById("home-screen-btn").addEventListener("click", function () {
-    hideScreen("home-screen");
-    showScreen("play-ground");
-    continueGame();
-  });
+document.getElementById("home-screen-btn").addEventListener("click", () => {
+  hideScreen("home-screen");
+  showScreen("play-ground");
+  continueGame();
+});
 
 // todo-alphabet functionality
 function continueGame() {
@@ -26,7 +26,7 @@ function continueGame() {
   setRandomAlphabetButton(alphabet);
 }
 
-document.addEventListener("keyup", function (event) {
+document.addEventListener("keyup", (event) => {
   const playerPress = event.key;
   const currentAlphabet = document.getElementById("current-alphabet");
   const targetKey = currentAlphabet.innerText.toLowerCase();
@@ -41,8 +41,7 @@ document.addEventListener("keyup", function (event) {
     // !continue the game again
     removeRandomAlphabetButton(targetKey);
     continueGame();
-  } 
-  else {
+  } else {
     // !1.get the current life number
     // !2.reduce the life count when press the wrong key
     // !3.display the updated life count
@@ -57,16 +56,13 @@ document.addEventListener("keyup", function (event) {
   }
 });
 
-document.getElementById('play-again').addEventListener('click',function(){
+document.getElementById("play-again").addEventListener("click", () => {
   // !hide everything and show the playground
   hideScreen("score-board");
   showScreen("play-ground");
   continueGame();
 
-
   // !update final score
   // !get the final score
   // !set the score in the final score board
-
-})
-
+});
